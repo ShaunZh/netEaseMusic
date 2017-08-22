@@ -1,0 +1,23 @@
+{
+  "name": "neteasemusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "anywhere": "latest"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaunZh/netEaseMusic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaunZh/netEaseMusic/issues"
+  },
+  "homepage": "https://github.com/ShaunZh/netEaseMusic#readme"
+}
