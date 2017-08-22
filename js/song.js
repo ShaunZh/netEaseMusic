@@ -5,6 +5,7 @@
 //   })
 // })
 
+let audioUrl = "//oqvj0lqwc.bkt.clouddn.com/%E5%A4%A7%E7%BA%A6%E5%9C%A8%E5%86%AC%E5%AD%A3.mp3";
 
 function getLyric() {
   $.get('../data/lyric.json').then(function (object) {
@@ -27,7 +28,7 @@ function getLyric() {
 
   });
   let audio = document.createElement('audio');
-  audio.src ="http://m10.music.126.net/20170822150457/e215e0292b3255ecd0ab4985a434bd25/ymusic/e1db/9abe/8b0a/b5deceec956392e4eae421dac085a564.mp3";
+  audio.src = audioUrl;
   audio.oncanplay = function () {
     audio.play();
     $('.disc-container').addClass('playing');
