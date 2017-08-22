@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*::before, *::after {
+  box-sizing: border-box; }
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: transparent url("http://p4.music.126.net/u00efj-I5Ga0G7q1IiojXw==/17726326463070932.jpg") no-repeat center;
+  background-size: cover; }
+  .page .disc-container {
+    position: relative; }
+    .page .disc-container .pointer {
+      width: 24vw;
+      position: absolute;
+      left: 45vw; }
+    .page .disc-container .disc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18vw; }
+      .page .disc-container .disc .ring {
+        width: 72vw; }
+      .page .disc-container .disc .light {
+        width: 72vw;
+        position: absolute;
+        animation: circle 20s infinite linear; }
+      .page .disc-container .disc .cover {
+        width: 44.5vw;
+        position: absolute;
+        border-radius: 50%;
+        animation: circle 20s infinite linear; }
+
+/*# sourceMappingURL=song.css.map */
