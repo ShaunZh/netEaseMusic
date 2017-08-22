@@ -1,11 +1,23 @@
 * {margin: 0; padding: 0;}
 *::before, *::after{box-sizing: border-box;}
 ul, ol {list-style: none}
+h1,h2,h3,h4,h5,h6 {font-weight: normal}
 
+html {
+  font-size: 10vw;;
+}
 body {
   font-size: 3.7vw;
 }
 
+section>h2:first-child{
+  font-size: 4.53vw;
+  border-left: 2px solid #D33A31;
+  margin: 4vw 0;
+  font-weight: normal;
+  padding-left:2.6vw;
+  line-height: 1;
+}
 .topbar{
   background: #D43C33;
   padding: 4.5vw 2.5vw;
@@ -48,7 +60,7 @@ body {
           bottom: 0;
           left: -2vw;
           right: -2vw;
-          border-top: 4px solid #D33A31;
+          border-top: 2px solid #D33A31;
         }
       }
     }
@@ -56,10 +68,67 @@ body {
 }
 
 .playlists {
-
+  margin-top: 5.5vw;
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > li {
+      width: calc(33.333333% - 1vw);
+      > img {
+        width: 100%;
+      }
+      > p {
+        display: -webkit-box;
+        height: 9vw;
+        line-height: 5vw;
+        padding: 1vw 1vw;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }
-.latestMusic {
 
+.latestMusic {
+  > ol {
+    margin-left: calc(2.6vw + 2px);
+    > li {
+      position: relative;
+      border-bottom: 1px solid #E2E2E2;
+      padding: 1vw 0;
+
+      h3 {
+        font-size: 4.53vw;
+      }
+      p {
+        font-size: 3.2vw;
+        color: #888;
+        display: flex;
+        align-items: center;
+      }
+      .play-circle {
+        > svg {
+          width: 5.9vw;
+          height: 5.9vw;
+          position: absolute;
+          right: 4vw;
+          top: 50%;
+          transform: translateY(-50%);
+          fill: #aaa;
+        }
+      }
+      svg.sq {
+        width: 4.2vw;
+        height: 4.2vw;
+        vertical-align: middle;
+        margin-right: 0.5em;
+        fill: #fe672e;
+      }
+    }
+  }
 }
 
 section.art{
