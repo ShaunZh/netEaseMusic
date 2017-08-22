@@ -48,12 +48,42 @@
         position: absolute;
         border-radius: 50%;
       }
+      .icon-wrap {
+        position: absolute;
+        height: 20vw;
+        width: 20vw;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.5);
+
+        .icon {
+          width: 10vw;
+          fill: #fff;
+        }
+      }
     }
 
   }
   .disc-container.playing .light,
   .disc-container.playing .cover {
     animation: circle 20s infinite linear;
+  }
+
+  .disc-container .icon-pause {
+    display: none;
+  }
+
+  .disc-container.playing {
+    .icon-pause {
+      display: block;
+    }
+    .icon-play {
+      display: none;
+    }
   }
 
 
