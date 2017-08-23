@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 72vw;
         position: absolute;
         left: 50%;
-        transition: translateX(-50%); }
+        transform: translateX(-50%); }
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
