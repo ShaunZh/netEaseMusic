@@ -100,7 +100,7 @@ function pad(number) {
 }
 
 function songDeal(id, successFn, errorFn) {
-  $.get('../songs.json').then(function(response) {
+  $.get('//oqvj0lqwc.bkt.clouddn.com/songs.json').then(function(response) {
     let songs = response;
     let song = songs.filter((s) => parseInt(s.id) === id);
     successFn && successFn.apply(null, song);
