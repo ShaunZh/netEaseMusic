@@ -6,7 +6,7 @@
  */ 
 
 $(function() {
-  $.get('./../songs.json').then(function(response){
+  $.getJSON('./songs.json').then(function(response){
     let $latestMusic = $('.latestMusic .lists');
     let $loadingIcon = $('.latestMusic .loadingIcon');
     console.log($latestMusic);
