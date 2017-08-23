@@ -18,7 +18,25 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
   background-size: cover;
 
   .disc-container{ position: relative;
-    .pointer { width: 24vw; position: absolute; left: 45vw; z-index: 1;
+    .pointerWrap {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 20PX;
+        height: 20PX;
+        z-index: 20;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        left: 48%;
+        top: -10PX;
+        transform: translateX(-50%);
+      }
+    }
+    .pointer { width: 24vw; position: absolute; left: 45vw; z-index: 1; transform-origin: top; transform: rotate(0deg);
+      transform-origin: 0 -5px;
+      transform: rotate(-20deg);
     }
     .disc{ display: flex; position: relative; justify-content: center; align-items: center; margin-top: 18vw;
       .ring{ width: 72vw;
@@ -63,6 +81,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
     }
     .icon-play {
       display: none;
+    }
+    .pointer {
+      transform: none;
     }
   }
 

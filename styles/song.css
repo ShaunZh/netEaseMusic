@@ -21,11 +21,29 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover; }
   .page .disc-container {
     position: relative; }
+    .page .disc-container .pointerWrap {
+      position: relative; }
+      .page .disc-container .pointerWrap::before {
+        content: '';
+        display: block;
+        width: 20PX;
+        height: 20PX;
+        z-index: 20;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        left: 48%;
+        top: -10PX;
+        transform: translateX(-50%); }
     .page .disc-container .pointer {
       width: 24vw;
       position: absolute;
       left: 45vw;
-      z-index: 1; }
+      z-index: 1;
+      transform-origin: top;
+      transform: rotate(0deg);
+      transform-origin: 0 -5px;
+      transform: rotate(-20deg); }
     .page .disc-container .disc {
       display: flex;
       position: relative;
@@ -76,6 +94,8 @@ h1, h2, h3, h4, h5, h6 {
     display: block; }
   .page .disc-container.playing .icon-play {
     display: none; }
+  .page .disc-container.playing .pointer {
+    transform: none; }
   .page .song-description {
     flex-grow: 1;
     color: #ccc;
