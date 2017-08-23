@@ -23,7 +23,10 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
     .disc{ display: flex; position: relative; justify-content: center; align-items: center; margin-top: 18vw;
       .ring{ width: 72vw; }
       .light{ width: 72vw;
-        position: absolute; }
+        position: absolute;
+        left: 50%;
+        transition: translateX(-50%);
+      }
       .cover { width: 44.5vw;
         position: absolute;
          border-radius: 50%; animation: circle 20s infinite linear; animation-play-state: paused; }
