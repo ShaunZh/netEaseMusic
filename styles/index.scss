@@ -132,5 +132,33 @@ section>h2:first-child{
 }
 
 section.art{
-
+  padding-top: 17.6vw;
+  background: url("http://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fafc60e017b653f8065a87496922") no-repeat center 0;
+  padding-bottom: 6vw;
+  .logo {
+    text-align: center;
+    margin-bottom: 3.5vw;
+    .logosvg {
+      width: 61.7vw;
+    }
+  }
+  .openApp {
+    display: block;
+    max-width: 81.3vw;
+    padding: 1vw 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #D43C33;
+    border: 1px solid;
+    font-size: 4.3vw;
+    text-decoration: none;
+    line-height: 8.6vw;
+    border-radius: 5.3vw;
+    margin-bottom: 2vw;
+  }
+  .copyright {
+    font-size: 3.2vw;
+    transform: scale(0.75);
+    text-align: center;
+  }
 }
