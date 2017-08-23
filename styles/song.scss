@@ -21,12 +21,19 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
     .pointer { width: 24vw; position: absolute; left: 45vw; z-index: 1;
     }
     .disc{ display: flex; position: relative; justify-content: center; align-items: center; margin-top: 18vw;
+      .img-wrap {
+        width: 72vw;
+        height: 72vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .ring{ width: 72vw;
+        position: absolute;
        }
       .light{ width: 72vw;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
       }
       .cover { width: 44.5vw;
         position: absolute;
