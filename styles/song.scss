@@ -18,13 +18,15 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
   background-size: cover;
 
   .disc-container{ position: relative;
-    .pointer { width: 24vw; position: absolute; left: 45vw;
+    .pointer { width: 24vw; position: absolute; left: 45vw; z-index: 1;
     }
-    .disc{ display: flex; justify-content: center; align-items: center; margin-top: 18vw;
+    .disc{ display: flex; position: relative; justify-content: center; align-items: center; margin-top: 18vw;
       .ring{ width: 72vw; }
       .light{ width: 72vw; position: absolute; }
       .cover { width: 44.5vw; position: absolute; border-radius: 50%; animation: circle 20s infinite linear; animation-play-state: paused; }
-      .icon-wrap { position: absolute; height: 20vw; width: 20vw; z-index: 10; display: flex; justify-content: center; align-items: center; border: 1px solid #fff; border-radius: 50%; background: rgba(0,0,0,0.5);
+      .icon-wrap { position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        height: 20vw; width: 20vw; z-index: 10; display: flex; justify-content: center; align-items: center; border: 1px solid #fff; border-radius: 50%; background: rgba(0,0,0,0.5);
         .icon { width: 10vw; fill: #fff; }
       }
     }

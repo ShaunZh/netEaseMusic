@@ -24,9 +24,11 @@ h1, h2, h3, h4, h5, h6 {
     .page .disc-container .pointer {
       width: 24vw;
       position: absolute;
-      left: 45vw; }
+      left: 45vw;
+      z-index: 1; }
     .page .disc-container .disc {
       display: flex;
+      position: relative;
       justify-content: center;
       align-items: center;
       margin-top: 18vw; }
@@ -43,6 +45,9 @@ h1, h2, h3, h4, h5, h6 {
         animation-play-state: paused; }
       .page .disc-container .disc .icon-wrap {
         position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         height: 20vw;
         width: 20vw;
         z-index: 10;
