@@ -35,10 +35,7 @@ h1, h2, h3, h4, h5, h6 {
       .page .disc-container .disc .img-wrap {
         width: 72vw;
         height: 72vw;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
+        position: relative; }
       .page .disc-container .disc .ring {
         width: 72vw;
         position: absolute; }
@@ -48,9 +45,6 @@ h1, h2, h3, h4, h5, h6 {
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         border-radius: 50%;
         animation: circle 20s infinite linear;
         animation-play-state: paused; }
