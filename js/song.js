@@ -19,17 +19,6 @@ function addEvent() {
   });
 }
 
-function songDeal(id, successFn, errorFn) {
-  $.get('../songs.json').then(function(response) {
-    let songs = response;
-    let song = songs.filter((s) => parseInt(s.id) === id);
-    console.log('song');
-    successFn && successFn.apply(null, song);
-    addEvent();
-  });
-}
-
-
 function getSongId() {
   id = parseInt(location.href.match(/id=([^&])*/)[1]);
   return id;
@@ -76,14 +65,47 @@ function dispLyric(lyric) {
 function playSong(song) {
   let audio = document.querySelector('.disc-container audio');
   audio.src = song.url;
-  console.log(audio);
   audio.oncanplay = function () {
     audio.play();
     $('.disc-container').addClass('playing');
     dispSongName(song);
     let lyric = getLyric(song);
     dispLyric(lyric);
+    setInterval(() => {
+      let seconds = audio.currentTime;
+      let minutes = ~~(seconds / 60);
+      let left = seconds - minutes * 60;
+      let time = `${pad(minutes)}:${pad(left)}`;
+      let $lines = $('.lines > p');
+      let $whichLine;
+      for (let i = 0; i < $lines.length; i++) {
+        if ($lines[i+1] !== undefined && $lines.eq(i).attr('data-time') < time && $lines.eq(i + 1).attr('data-time') > time) {
+          $whichLine = $lines.eq(i);
+        }
+      }
+      if ($whichLine) {
+        $whichLine.addClass('active').prev().removeClass('active');
+        let top = $whichLine.offset().top;
+        let linesTop = $('.lines').offset().top;
+        let delta = top - linesTop - $('.lyric').height()/3;
+        $('.lines').css('transform', `translateY(-${delta}px)`);
+      }
+    }, 300)
   };
+}
+
+
+function pad(number) {
+  return number >= 10 ? number + '' : '0' + number;
+}
+
+function songDeal(id, successFn, errorFn) {
+  $.get('../songs.json').then(function(response) {
+    let songs = response;
+    let song = songs.filter((s) => parseInt(s.id) === id);
+    successFn && successFn.apply(null, song);
+    addEvent();
+  });
 }
 
 $(function(){
