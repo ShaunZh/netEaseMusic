@@ -5,6 +5,9 @@
 *::before, *::after {
   box-sizing: border-box; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
 @keyframes circle {
   0% {
     -webkit-transform: rotate(0deg);
@@ -43,7 +46,9 @@
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
-        border-radius: 50%; }
+        border-radius: 50%;
+        animation: circle 20s infinite linear;
+        animation-play-state: paused; }
       .page .disc-container .disc .icon-wrap {
         position: absolute;
         height: 20vw;
@@ -60,7 +65,7 @@
           fill: #fff; }
   .page .disc-container.playing .light,
   .page .disc-container.playing .cover {
-    animation: circle 20s infinite linear; }
+    animation-play-state: running; }
   .page .disc-container .icon-pause {
     display: none; }
   .page .disc-container.playing .icon-pause {
