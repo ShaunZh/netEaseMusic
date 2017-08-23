@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 25%;
+        left: 25%;
         border-radius: 50%;
         animation: circle 20s infinite linear;
         animation-play-state: paused; }
