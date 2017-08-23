@@ -84,6 +84,11 @@ section > h2:first-child {
         overflow: hidden;
         text-overflow: ellipsis; }
 
+.latestMusic .loadingIcon {
+  text-align: center; }
+.latestMusic a {
+  text-decoration: none;
+  color: inherit; }
 .latestMusic > ol {
   margin-left: calc(2.6vw + 2px); }
   .latestMusic > ol > li {

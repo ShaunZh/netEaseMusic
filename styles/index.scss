@@ -93,6 +93,13 @@ section>h2:first-child{
 }
 
 .latestMusic {
+  .loadingIcon {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   > ol {
     margin-left: calc(2.6vw + 2px);
     > li {
