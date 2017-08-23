@@ -9,10 +9,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 @keyframes circle {
-  0% {
-    transform: rotate(0deg) translate(-50%, -50%); }
-  100% {
-    transform: rotate(360deg) translate(-50%, -50%); } }
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 .page {
   display: flex;
   flex-direction: column;
@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
       justify-content: center;
       align-items: center;
       margin-top: 18vw; }
+      .page .disc-container .disc .imgWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
       .page .disc-container .disc .ring {
         width: 72vw; }
       .page .disc-container .disc .light {
@@ -43,9 +47,6 @@ h1, h2, h3, h4, h5, h6 {
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         border-radius: 50%;
         animation: circle 20s infinite linear;
         animation-play-state: paused; }
