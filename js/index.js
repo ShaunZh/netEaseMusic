@@ -6,7 +6,7 @@
  */ 
 
 $(function() {
-  $.get('../songs.json').then(function(response){
+  $.get('//oqvj0lqwc.bkt.clouddn.com/songs.json').then(function(response){
     let $latestMusic = $('.latestMusic .lists');
     let $loadingIcon = $('.latestMusic .loadingIcon');
     console.log($latestMusic);
