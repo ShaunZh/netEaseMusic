@@ -32,19 +32,20 @@ h1, h2, h3, h4, h5, h6 {
       justify-content: center;
       align-items: center;
       margin-top: 18vw; }
-      .page .disc-container .disc .img-wrap {
-        width: 72vw;
-        height: 72vw;
-        position: relative; }
       .page .disc-container .disc .ring {
-        width: 72vw;
-        position: absolute; }
+        width: 72vw; }
       .page .disc-container .disc .light {
         width: 72vw;
-        position: absolute; }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
       .page .disc-container .disc .cover {
         width: 44.5vw;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         border-radius: 50%;
         animation: circle 20s infinite linear;
         animation-play-state: paused; }
