@@ -3,11 +3,11 @@
   "musicInfo": {
     "title": "[粤语] 当港乐遇上Remix",
     "author": "爱新觉罗虾虾",
-    "photo": "../img/cat.jpg",
-    "img": "../img/cat.jpg",
+    "authorPhoto":"//p1.music.126.net/DMrSwYiMJVo-7F5WRJqGlg==/19065531625803433.webp?imageView&thumbnail=60x0&quality=75&tostatic=0&type=webp",
+    "sheetImg": "./../img/cat.jpg",
     "fans": "12312121",
     "flag": ["粤语", "残片", "月半小夜曲"],
-    "intro": "仍然倚在失眠夜望天边星宿\n 仍然听见小提琴如泣似诉再挑逗 \n为何只剩一弯月留在我的天空 \n这晚以后音讯隔绝 \n人如天上的明月是不可拥有\n",
+    "intro": "仍然倚在失眠夜望天边星宿\n 仍然听见小提琴如泣似诉再挑逗 \n为何只剩一弯月留在我的天空 \n这晚以后音讯隔绝 \n人如天上的明月是不可拥有\n"
   },
   "musicList" : [
     {
