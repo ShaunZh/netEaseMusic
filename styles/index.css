@@ -11,6 +11,10 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 html {
   font-size: 10vw; }
 
@@ -127,9 +131,12 @@ section > h2:first-child {
     justify-content: space-between; }
     .playlists > ul > li {
       width: calc(33.333333% - 1vw); }
-      .playlists > ul > li > img {
+      .playlists > ul > li > a {
+        width: 100%;
+        display: inline-block; }
+      .playlists > ul > li img {
         width: 100%; }
-      .playlists > ul > li > p {
+      .playlists > ul > li p {
         display: -webkit-box;
         height: 9vw;
         line-height: 5vw;

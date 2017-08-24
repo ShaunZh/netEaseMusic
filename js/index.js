@@ -56,7 +56,7 @@ $(function() {
       if ($('.tabContent > li').eq(index).attr('data-downloaded') === 'yes') {
         return;
       }
-      $.get('./page3.json').then((response) => {
+      $.get('./musicSheet.json').then((response) => {
         $('.tabContent > li').eq(index).attr('data-downloaded', 'yes');
         console.log(response);
       });
@@ -122,7 +122,6 @@ $('input#searchSong').on('input', function(e) {
     })
   }, 1000)
 });
-
 
 function search(keyword) {
   return new Promise((resolve, reject) => {
