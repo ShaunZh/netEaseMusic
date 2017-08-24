@@ -2,6 +2,9 @@
 *::before, *::after{box-sizing: border-box;}
 ul, ol {list-style: none}
 h1,h2,h3,h4,h5,h6 {font-weight: normal}
+input {
+  outline: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -54,7 +57,7 @@ section>h2:first-child{
     > .pannel {
       padding: 5.3vw 4.5vw;
       background: url('../img/hot_music_bg.jpg') no-repeat;
-      //background-size: cover;
+      background-size: cover;
       .hotIcon {
         width: 37.8vw;
         height: 17.9vw;
@@ -122,6 +125,105 @@ section>h2:first-child{
             }
           }
         }
+      }
+    }
+  }
+
+  > .search {
+    width: 100%;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    > .inputWrap {
+      padding: 4vw 2.7vw;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      > svg.search{
+        position: absolute;
+        left: 4.4vw;
+        top: 6.1vw;
+        width: 4vw;
+        height: 4vw;
+        fill: #ccc;
+        margin-right: 1vw;
+      }
+      > svg.close {
+        display: none;
+        position: absolute;
+        right: 4.4vw;
+        top: 6.1vw;
+        width: 4vw;
+        height: 4vw;
+        fill: #ccc;
+        margin-right: 1vw;
+        &.active {
+          display:block;
+        }
+
+      }
+      input {
+        width: calc(100% - 8vw);
+        height: 8vw;
+        border-radius: 8vw;
+        font-size: 3.7vw;
+        line-height: 1.8;
+        background: #ebecec;
+        color: #333;
+        padding-left: 8vw;
+        border: none;
+      }
+    }
+    input-placeholder: #888;
+
+    .hotSearch {
+      display: none;
+      &.active {
+        display: block;
+      }
+      > h3 {
+        font-size: 3.2vw;
+        line-height: 3.2vw;
+        color: #666;
+        margin-bottom: 4vw;
+      }
+      > .hotResult {
+        > span {
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 40%;
+          padding: 0 3.7vw;
+          margin-right: 2.1vw;
+          margin-bottom: 2vw;
+          line-height: 8.5vw;
+          font-size: 3.7vw;
+        }
+      }
+    }
+    > .searchResult {
+      display: none;
+      > .inputWord {
+        border-bottom: 1px solid #ccc;
+        padding: 4vw 0;
+        margin-left: 2.7vw;
+        font-size: 4vw;
+        color: #507daf;
+      }
+      > .results {
+        > li {
+          padding: 4vw 0;
+          margin-left: 2.7vw;
+          border-bottom: 1px solid #ccc;
+          color: #333;
+          > svg {
+            width: 4vw;
+            height: 4vw;
+            fill: #ccc;
+            margin-right: 1vw;
+          }
+        }
+      }
+      &.active {
+        display: block;
       }
     }
   }

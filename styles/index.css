@@ -11,6 +11,9 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
+input {
+  outline: none; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -52,7 +55,8 @@ section > h2:first-child {
     display: block; }
 .tabContent > .hotMusic > .pannel {
   padding: 5.3vw 4.5vw;
-  background: url("../img/hot_music_bg.jpg") no-repeat; }
+  background: url("../img/hot_music_bg.jpg") no-repeat;
+  background-size: cover; }
   .tabContent > .hotMusic > .pannel .hotIcon {
     width: 37.8vw;
     height: 17.9vw;
@@ -100,6 +104,80 @@ section > h2:first-child {
       vertical-align: middle;
       margin-right: 0.5em;
       fill: #fe672e; }
+.tabContent > .search {
+  width: 100%;
+  input-placeholder: #888; }
+  .tabContent > .search > .inputWrap {
+    padding: 4vw 2.7vw;
+    border-bottom: 1px solid #ccc;
+    position: relative; }
+    .tabContent > .search > .inputWrap > svg.search {
+      position: absolute;
+      left: 4.4vw;
+      top: 6.1vw;
+      width: 4vw;
+      height: 4vw;
+      fill: #ccc;
+      margin-right: 1vw; }
+    .tabContent > .search > .inputWrap > svg.close {
+      display: none;
+      position: absolute;
+      right: 4.4vw;
+      top: 6.1vw;
+      width: 4vw;
+      height: 4vw;
+      fill: #ccc;
+      margin-right: 1vw; }
+      .tabContent > .search > .inputWrap > svg.close.active {
+        display: block; }
+    .tabContent > .search > .inputWrap input {
+      width: calc(100% - 8vw);
+      height: 8vw;
+      border-radius: 8vw;
+      font-size: 3.7vw;
+      line-height: 1.8;
+      background: #ebecec;
+      color: #333;
+      padding-left: 8vw;
+      border: none; }
+  .tabContent > .search .hotSearch {
+    display: none; }
+    .tabContent > .search .hotSearch.active {
+      display: block; }
+    .tabContent > .search .hotSearch > h3 {
+      font-size: 3.2vw;
+      line-height: 3.2vw;
+      color: #666;
+      margin-bottom: 4vw; }
+    .tabContent > .search .hotSearch > .hotResult > span {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 40%;
+      padding: 0 3.7vw;
+      margin-right: 2.1vw;
+      margin-bottom: 2vw;
+      line-height: 8.5vw;
+      font-size: 3.7vw; }
+  .tabContent > .search > .searchResult {
+    display: none; }
+    .tabContent > .search > .searchResult > .inputWord {
+      border-bottom: 1px solid #ccc;
+      padding: 4vw 0;
+      margin-left: 2.7vw;
+      font-size: 4vw;
+      color: #507daf; }
+    .tabContent > .search > .searchResult > .results > li {
+      padding: 4vw 0;
+      margin-left: 2.7vw;
+      border-bottom: 1px solid #ccc;
+      color: #333; }
+      .tabContent > .search > .searchResult > .results > li > svg {
+        width: 4vw;
+        height: 4vw;
+        fill: #ccc;
+        margin-right: 1vw; }
+    .tabContent > .search > .searchResult.active {
+      display: block; }
 
 .siteNav > ol {
   display: flex;
