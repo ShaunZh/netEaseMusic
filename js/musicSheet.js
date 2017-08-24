@@ -21,7 +21,7 @@ function dispSheetInfo(info) {
   info.flag.forEach((item) => {
     let $flag = $(`
         <span class="flag">${item}</span>
-    `)
+    `);
     $briefInfo.append($flag);
   });
   // 歌单介绍
@@ -31,16 +31,45 @@ function dispSheetInfo(info) {
     if (item.length > 0) {
       let $p = $(`
         <p>${item}</p>
-    `)
+    `);
       $intro.append($p);
     }
   })
-
 }
+
+
+function dispMusicList(musicList) {
+  let $items = $('.musicList > .items');
+  musicList.forEach((d, index) => {
+    let $li = $(`
+          <li>
+            <a href="../pages/song.html?id=${d.id}" class="play-circle">
+              <span class="listNo">${index + 1}</span>
+              <div class="musicBrief">
+                <h3>${d.name}</h3>
+                <p>
+                  <svg class="sq">
+                    <use xlink:href="#icon-sq"></use>
+                  </svg>
+                  演唱者-专辑
+                </p>
+              </div>
+              <svg>
+                <use xlink:href="#icon-play-circle"></use>
+              </svg>
+            </a>
+          </li>
+        `);
+    $items.append($li);
+  });
+}
+
+
 $(function(){
   console.log('hhh')
   $.get('./../musicSheet.json').then(function(response) {
-    dispSheetInfo(response.musicInfo)
+    dispSheetInfo(response.musicInfo);
+    dispMusicList(response.musicList);
 
   })
 });

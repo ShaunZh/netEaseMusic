@@ -78,14 +78,16 @@ body {
   background: #f8f8f8;
   color: #666;
   font-size: 3.8vw; }
+  .sheetIntro .word .birefIntro {
+    margin-bottom: 2vw; }
+    .sheetIntro .word .birefIntro > .flag {
+      font-size: 3.2vw;
+      margin-left: 2vw;
+      padding: 1vw 2vw;
+      border: 1px solid #eaeaea;
+      border-radius: 34%; }
   .sheetIntro .word .intro > p:first-of-type {
     display: inline; }
-  .sheetIntro .birefIntro > .flag {
-    font-size: 3.2vw;
-    margin-left: 2vw;
-    padding: 1vw 2vw;
-    border: 1px solid #eaeaea;
-    border-radius: 34%; }
   .sheetIntro p {
     line-height: 2; }
 

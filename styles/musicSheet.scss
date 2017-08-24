@@ -87,19 +87,20 @@ body {
   color: #666;
   font-size: 3.8vw;
   .word {
+    .birefIntro {
+      margin-bottom: 2vw;
+      > .flag{
+        font-size: 3.2vw;
+        margin-left: 2vw;
+        padding: 1vw 2vw;
+        border: 1px solid #eaeaea;
+        border-radius: 34%;
+      }
+    }
     .intro {
       > p:first-of-type{
         display: inline;
       }
-    }
-  }
-  .birefIntro {
-    > .flag{
-      font-size: 3.2vw;
-      margin-left: 2vw;
-      padding: 1vw 2vw;
-      border: 1px solid #eaeaea;
-      border-radius: 34%;
     }
   }
   p {
