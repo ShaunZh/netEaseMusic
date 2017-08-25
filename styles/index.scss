@@ -136,9 +136,9 @@ section>h2:first-child{
     //align-items: center;
     > .inputWrap {
       padding: 4vw 2.7vw;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #f0f1f2;
       position: relative;
-      > svg.search{
+      > svg.searchIcon{
         position: absolute;
         left: 4.4vw;
         top: 6.1vw;
@@ -147,7 +147,7 @@ section>h2:first-child{
         fill: #ccc;
         margin-right: 1vw;
       }
-      > svg.close {
+      > svg.closeIcon {
         display: none;
         position: absolute;
         right: 4.4vw;
@@ -185,11 +185,12 @@ section>h2:first-child{
         line-height: 3.2vw;
         color: #666;
         margin-bottom: 4vw;
+        margin-left: 2.7vw;
       }
       > .hotResult {
         > span {
           display: inline-block;
-          border: 1px solid #ccc;
+          border: 1px solid #f0f1f2;
           border-radius: 40%;
           padding: 0 3.7vw;
           margin-right: 2.1vw;
@@ -202,9 +203,10 @@ section>h2:first-child{
     > .searchResult {
       display: none;
       > .inputWord {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #f0f1f2;
         padding: 4vw 0;
         margin-left: 2.7vw;
+        margin-right: 2.7vw;
         font-size: 4vw;
         color: #507daf;
       }
@@ -212,9 +214,9 @@ section>h2:first-child{
         > li {
           padding: 4vw 0;
           margin-left: 2.7vw;
-          border-bottom: 1px solid #ccc;
+          border-bottom: 1px solid #f0f1f2;
           color: #333;
-          > svg {
+          svg {
             width: 4vw;
             height: 4vw;
             fill: #ccc;
@@ -233,7 +235,7 @@ section>h2:first-child{
   > ol {
     display: flex;
     text-align: center;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #f0f1f2;
     font-size: 1.1em;
     > li {
       flex: 1;
