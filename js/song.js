@@ -20,8 +20,7 @@ function addEvent() {
 }
 
 function getSongId() {
-  id = parseInt(location.href.match(/id=([^&])*/)[1]);
-  return id;
+  return  parseInt(location.href.match(/id=([^&])*/)[1]);
 }
 
 function getLyric(song) {
