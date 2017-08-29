@@ -1,14 +1,14 @@
 /**
  * @Author: Hexon
  * @Date: 2017/8/23 11:00
- * @Last Modified by: Hexon
+ * @Last Modified by:   Marte
  * @Last Modified time: 2017/8/23 11:00
  */
 
 
 
 $(function() {
-  $.get('./songs.json').then(function(response){
+  $.get('../songs.json').then(function(response){
     let $latestMusic = $('.latestMusic .lists');
     let $loadingIcon = $('.latestMusic .loadingIcon');
     let items = response;
@@ -47,7 +47,7 @@ $(function() {
       if ($('.tabContent > li').eq(index).attr('data-downloaded') === 'yes') {
         return;
       }
-      $.get('./hotMusic.json').then((response) => {
+      $.get('../hotMusic.json').then((response) => {
         $('.tabContent > li').eq(index).attr('data-downloaded', 'yes');
         renderHotMusic(response);
       });
@@ -55,7 +55,7 @@ $(function() {
       if ($('.tabContent > li').eq(index).attr('data-downloaded') === 'yes') {
         return;
       }
-      $.get('./musicSheet.json').then((response) => {
+      $.get('../musicSheet.json').then((response) => {
         $('.tabContent > li').eq(index).attr('data-downloaded', 'yes');
       });
     }
