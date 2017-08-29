@@ -1,7 +1,7 @@
 /**
  * @Author: Hexon
  * @Date: 2017/8/24 19:22
- * @Last Modified by: Hexon
+ * @Last Modified by:   Marte
  * @Last Modified time: 2017/8/24 19:22
  */
 
@@ -43,7 +43,7 @@ function dispMusicList(musicList) {
   musicList.forEach((d, index) => {
     let $li = $(`
           <li>
-            <a href="../pages/song.html?id=${d.id}" class="play-circle">
+            <a href="./song.html?id=${d.id}" class="play-circle">
               <span class="listNo">${index + 1}</span>
               <div class="musicBrief">
                 <h3>${d.name}</h3>

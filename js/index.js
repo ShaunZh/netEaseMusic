@@ -15,7 +15,7 @@ $(function() {
     items.forEach((item) => {
       let $li = $(`
       <li>
-        <a href="./pages/song.html?id=${item.id}" class="play-circle">
+        <a href="./song.html?id=${item.id}" class="play-circle">
           <h3>${item.name}</h3>
           <p>
           <svg class="sq">
