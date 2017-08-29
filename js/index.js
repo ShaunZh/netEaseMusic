@@ -70,7 +70,7 @@ function renderHotMusic(data) {
     index = (((index + 1) < 10) ? '0' : '') + (index+1);
     let $li = $(`
           <li>
-            <a href="./pages/song.html?id=${d.id}" class="play-circle">
+            <a href="./song.html?id=${d.id}" class="play-circle">
               <span class="listNo">${index}</span>
               <div class="musicBrief">
                 <h3>${d.name}</h3>
@@ -123,7 +123,7 @@ function dispSearchResult(value, dataArr) {
     dataArr.forEach((item) => {
       let $li = $(`
           <li>
-            <a href="./pages/song.html?id=${item.id}">
+            <a href="./song.html?id=${item.id}">
             <svg>
               <use xlink:href="#icon-search"></use>
             </svg>
