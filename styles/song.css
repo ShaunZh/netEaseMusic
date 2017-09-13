@@ -67,7 +67,8 @@ h1, h2, h3, h4, h5, h6 {
         width: 44.5vw;
         border-radius: 50%;
         animation: circle 20s infinite linear;
-        animation-play-state: paused; }
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused; }
       .page .disc-container .disc .icon-wrap {
         position: absolute;
         top: 50%;
@@ -87,7 +88,8 @@ h1, h2, h3, h4, h5, h6 {
           fill: #fff; }
   .page .disc-container.playing .light,
   .page .disc-container.playing .cover {
-    animation-play-state: running; }
+    animation-play-state: running;
+    -webkit-animation-play-state: running; }
   .page .disc-container .icon-pause {
     display: none; }
   .page .disc-container.playing .icon-pause {

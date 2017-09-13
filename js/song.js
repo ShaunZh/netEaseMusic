@@ -7,7 +7,10 @@
 
 
 function addEvent() {
+
   let audio = document.querySelector('.disc-container audio');
+  console.log('audio');
+  console.log(audio);
   $('.icon-pause').on('click', function () {
     audio.pause();
     $('.disc-container').removeClass('playing');
@@ -17,6 +20,11 @@ function addEvent() {
     audio.play();
     $('.disc-container').addClass('playing');
   });
+
+  // 播放结束
+  $(audio).on('ended', function() {
+    $('.disc-container').removeClass('playing');
+  })
 }
 
 function getSongId() {
@@ -65,13 +73,13 @@ function playSong(song) {
   let audio = document.querySelector('.disc-container audio');
   audio.src = song.url;
   audio.oncanplay = function () {
-
     audio.play();
     $('.disc-container').addClass('playing');
     dispSongName(song);
     let lyric = getLyric(song);
     dispLyric(lyric);
     setInterval(() => {
+      console.log(audio.currentTime);
       let seconds = audio.currentTime;
       let minutes = ~~(seconds / 60);
       let left = seconds - minutes * 60;
@@ -91,7 +99,6 @@ function playSong(song) {
         $('.lines').css('transform', `translateY(-${delta}px)`);
       }
     }, 300);
-    addEvent();
   };
 }
 
@@ -105,6 +112,7 @@ function songDeal(id, successFn, errorFn) {
     let songs = response;
     let song = songs.filter((s) => parseInt(s.id) === id);
     successFn && successFn.apply(null, song);
+    addEvent();
   });
 }
 

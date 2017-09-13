@@ -6,7 +6,11 @@ var minifycss = require('gulp-minify-css'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
     minhtml = require('gulp-htmlmin'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssnext = require('cssnext');
+
 
 gulp.task('html', function() {
   return gulp.src('pages/*.html')
@@ -15,7 +19,12 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function(argument) {
-  gulp.src('styles/*.css')
+  var processors = [
+    autoprefixer,
+    cssnext
+  ];
+  return gulp.src('styles/*.css')
+      .pipe(postcss(processors))
       .pipe(minifycss())
       .pipe(gulp.dest('dist/styles/'));
 });
