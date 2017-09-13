@@ -65,6 +65,7 @@ function playSong(song) {
   let audio = document.querySelector('.disc-container audio');
   audio.src = song.url;
   audio.oncanplay = function () {
+
     audio.play();
     $('.disc-container').addClass('playing');
     dispSongName(song);
@@ -89,7 +90,8 @@ function playSong(song) {
         let delta = top - linesTop - $('.lyric').height()/3;
         $('.lines').css('transform', `translateY(-${delta}px)`);
       }
-    }, 300)
+    }, 300);
+    addEvent();
   };
 }
 
@@ -103,7 +105,7 @@ function songDeal(id, successFn, errorFn) {
     let songs = response;
     let song = songs.filter((s) => parseInt(s.id) === id);
     successFn && successFn.apply(null, song);
-    addEvent();
+
   });
 }
 
