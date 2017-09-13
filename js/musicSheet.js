@@ -66,7 +66,6 @@ function dispMusicList(musicList) {
 
 
 $(function(){
-  console.log('hhh')
   $.get('./../musicSheet.json').then(function(response) {
     dispSheetInfo(response.musicInfo);
     dispMusicList(response.musicList);

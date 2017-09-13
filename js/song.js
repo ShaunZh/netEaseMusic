@@ -9,8 +9,6 @@
 function addEvent() {
 
   let audio = document.querySelector('.disc-container audio');
-  console.log('audio');
-  console.log(audio);
   $('.icon-pause').on('click', function () {
     audio.pause();
     $('.disc-container').removeClass('playing');
@@ -79,7 +77,6 @@ function playSong(song) {
     let lyric = getLyric(song);
     dispLyric(lyric);
     setInterval(() => {
-      console.log(audio.currentTime);
       let seconds = audio.currentTime;
       let minutes = ~~(seconds / 60);
       let left = seconds - minutes * 60;

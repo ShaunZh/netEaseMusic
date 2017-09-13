@@ -8,7 +8,9 @@
     "start": "npm run open",
     "prod": "gulp build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  },
   "devDependencies": {
     "anywhere": "latest",
     "autoprefixer": "^7.1.4",
