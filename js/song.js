@@ -90,6 +90,7 @@ function playSong(song) {
         $('.lines').css('transform', `translateY(-${delta}px)`);
       }
     }, 300)
+    addEvent();
   };
 }
 
@@ -103,7 +104,6 @@ function songDeal(id, successFn, errorFn) {
     let songs = response;
     let song = songs.filter((s) => parseInt(s.id) === id);
     successFn && successFn.apply(null, song);
-    addEvent();
   });
 }
 

@@ -104,6 +104,8 @@ section > h2:first-child {
       vertical-align: middle;
       margin-right: 0.5em;
       fill: #fe672e; }
+.tabContent > .hotMusic > .loadingIcon {
+  text-align: center; }
 .tabContent > .search {
   width: 100%;
   input-placeholder: #888; }

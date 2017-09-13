@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "open": "anywhere -d ./dist/pages/",
-    "start": "npm run open"
+    "start": "npm run open",
+    "prod": "gulp build"
   },
   "dependencies": {},
   "devDependencies": {
